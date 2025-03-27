@@ -20,8 +20,8 @@ module.exports = {
   testPathIgnorePatterns: ["<rootDir>/lib/", "/node_modules/", "/examples/"],
   // we want to depend on the source version in the tests to get correct coverage
   moduleNameMapper: {
-    "^(langfuse(?!-server).*)$": "<rootDir>/$1/index",
+    "^(hanzo(?!-server).*)$": "<rootDir>/$1/index",
   },
   // we need to exclude the modules in the examples folder from the module lookup as they would collide
-  modulePathIgnorePatterns: ["<rootDir>/examples/", "<rootDir>/langfuse-server/"],
+  modulePathIgnorePatterns: ["<rootDir>/examples/", "<rootDir>/hanzo-server/"],
 };

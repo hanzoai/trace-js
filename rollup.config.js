@@ -7,7 +7,7 @@ import dts from "rollup-plugin-dts";
 import del from "rollup-plugin-delete";
 
 const extensions = [".js", ".jsx", ".ts", ".tsx"];
-const packages = ["langfuse-core", "langfuse", "langfuse-node", "langfuse-langchain", "langfuse-vercel"];
+const packages = ["hanzo-core", "hanzo", "hanzo-node", "hanzo-langchain", "hanzo-vercel"];
 
 const configs = packages.reduce((acc, x) => {
   const localPkg = require(`./${x}/package.json`);

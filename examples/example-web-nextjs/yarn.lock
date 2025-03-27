@@ -1550,28 +1550,28 @@ jsonfile@^4.0.0:
     object.assign "^4.1.4"
     object.values "^1.1.6"
 
-langfuse-core@^3.31.0:
+hanzo-core@^3.31.0:
   version "3.31.0"
-  resolved "https://registry.yarnpkg.com/langfuse-core/-/langfuse-core-3.31.0.tgz#2bffd0182c110fa80597d3bdc2b14d599d827946"
+  resolved "https://registry.yarnpkg.com/hanzo-core/-/hanzo-core-3.31.0.tgz#2bffd0182c110fa80597d3bdc2b14d599d827946"
   integrity sha512-aJ8dNp1Oh8e+XLJb5M+1lzluqi4oLBFxuSh56e8852WOifPs4Q3HPVblvf2YtyhpYqj0x+0cwhVP+iO2AAsh6Q==
   dependencies:
     mustache "^4.2.0"
 
-"langfuse-core@file:.yalc/langfuse-core":
+"hanzo-core@file:.yalc/hanzo-core":
   version "3.31.0"
   dependencies:
     mustache "^4.2.0"
 
-"langfuse-node@file:.yalc/langfuse-node":
+"hanzo-node@file:.yalc/hanzo-node":
   version "3.31.0"
   dependencies:
     axios "^1.7.4"
-    langfuse-core "^3.31.0"
+    hanzo-core "^3.31.0"
 
-"langfuse@file:.yalc/langfuse":
+"hanzo@file:.yalc/hanzo":
   version "3.31.0"
   dependencies:
-    langfuse-core "^3.31.0"
+    hanzo-core "^3.31.0"
 
 language-subtag-registry@~0.3.2:
   version "0.3.22"

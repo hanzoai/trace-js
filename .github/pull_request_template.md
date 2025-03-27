@@ -21,8 +21,8 @@
 <!-- Please mark which libraries will require a version bump. -->
 
 - [ ] All of them
-- [ ] langfuse
-- [ ] langfuse-node
+- [ ] hanzo
+- [ ] hanzo-node
 
 ### Changelog notes
 

@@ -1,7 +1,7 @@
 import axios, { type AxiosResponse } from "axios";
 import fs from "fs/promises";
 
-import { type components } from "../langfuse-core/src/openapi/server";
+import { type components } from "../hanzo-core/src/openapi/server";
 
 export const LANGFUSE_BASEURL = String(process.env.LANGFUSE_BASEURL);
 export const LANGFUSE_PUBLIC_KEY = String(process.env.LANGFUSE_PUBLIC_KEY);

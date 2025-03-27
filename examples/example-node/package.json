@@ -7,18 +7,18 @@
     "preinstall": "yarn build:dependencies",
     "prestart": "yarn build:dependencies",
     "start": "ts-node example.ts",
-    "build:dependencies": "yarn build:langfuse-core && yarn build:langfuse-node",
-    "build:langfuse-node": "yarn build:langfuse-node:publish && yarn build:langfuse-node:link",
-    "build:langfuse-node:publish": "cd ../../langfuse-node && yalc publish --replace",
-    "build:langfuse-node:link": "yalc remove langfuse-node && yalc add langfuse-node",
-    "build:langfuse-core": "yarn build:langfuse-core:publish && yarn build:langfuse-core:link",
-    "build:langfuse-core:publish": "cd ../../langfuse-core && yalc publish --replace",
-    "build:langfuse-core:link": "yalc remove langfuse-core && yalc add langfuse-core"
+    "build:dependencies": "yarn build:hanzo-core && yarn build:hanzo-node",
+    "build:hanzo-node": "yarn build:hanzo-node:publish && yarn build:hanzo-node:link",
+    "build:hanzo-node:publish": "cd ../../hanzo-node && yalc publish --replace",
+    "build:hanzo-node:link": "yalc remove hanzo-node && yalc add hanzo-node",
+    "build:hanzo-core": "yarn build:hanzo-core:publish && yarn build:hanzo-core:link",
+    "build:hanzo-core:publish": "cd ../../hanzo-core && yalc publish --replace",
+    "build:hanzo-core:link": "yalc remove hanzo-core && yalc add hanzo-core"
   },
   "dependencies": {
     "express": "^4.18.1",
-    "langfuse-core": "file:.yalc/langfuse-core",
-    "langfuse-node": "file:.yalc/langfuse-node",
+    "hanzo-core": "file:.yalc/hanzo-core",
+    "hanzo-node": "file:.yalc/hanzo-node",
     "undici": "^5.8.0"
   },
   "devDependencies": {

@@ -4,10 +4,10 @@
 
 This repository is broken into different packages
 
-- **/langfuse-core** > All common code goes here.
-- **/langfuse-node** > Node.js specific code
-- **/langfuse** > Web/Edge/modern Node.js specific code, using fetch and browser APIs
-- **/langfuse-langchain** > Langchain integration via callback handler
+- **/hanzo-core** > All common code goes here.
+- **/hanzo-node** > Node.js specific code
+- **/hanzo** > Web/Edge/modern Node.js specific code, using fetch and browser APIs
+- **/hanzo-langchain** > Langchain integration via callback handler
 
 ### Installing dependencies
 
@@ -25,7 +25,7 @@ yarn test
 
 **Setup**
 
-1. Start local langfuse server
+1. Start local hanzo server
 2. Create testing project
 3. Set environment: LANGFUSE_BASEURL, LANGFUSE_PUBLIC_KEY, LANGFUSE_SECRET_KEY
 
@@ -41,11 +41,11 @@ yarn test:integration
 
 ## Update OpenAPI spec
 
-1. Generate Fern JavaScript SDK in [langfuse](https://github.com/langfuse/langfuse) and copy the files generated in `web/public/generated/api/openapi.yml` and `web/public/generated/api-client/openapi.yml` into the `langfuse-core/openapi-spec` folder in this repo.
+1. Generate Fern JavaScript SDK in [hanzo](https://github.com/hanzoai/hanzo) and copy the files generated in `web/public/generated/api/openapi.yml` and `web/public/generated/api-client/openapi.yml` into the `hanzo-core/openapi-spec` folder in this repo.
 2. Execute the following command: `yarn run generateAPI` this updates
 
 - the TypeScript types resulting from the OpenAPI spec.
-- the public API client exposed on the `api` property of the Langfuse client. Learn more about the options in the `swagger-typescript-api` [repo here](https://github.com/acacode/swagger-typescript-api).
+- the public API client exposed on the `api` property of the Hanzo client. Learn more about the options in the `swagger-typescript-api` [repo here](https://github.com/acacode/swagger-typescript-api).
 
 ## Publishing a new version
 
@@ -57,7 +57,7 @@ yarn build
 
 Run `npx lerna publish --force-publish --no-private --concurrency 1`
 
-- Bumps version number of langfuse and langfuse-node, ignores langfuse-core
+- Bumps version number of hanzo and hanzo-node, ignores hanzo-core
 - Publishes to NPM, publishes also when there are no changes to keep the version numbers in sync
 - Confirm with npmjs OTP
 
