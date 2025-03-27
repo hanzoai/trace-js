@@ -8,7 +8,7 @@ This is the main JS/TS client for Hanzo.
 
 ## Documentation
 
-- Docs: https://hanzo.com/docs/sdk/typescript
+- Docs: https://hanzo.ai/docs/sdk/typescript
 - Reference: https://js.reference.hanzo.com/modules/hanzo.html
 
 ## Environments

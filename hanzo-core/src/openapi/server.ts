@@ -198,7 +198,7 @@ export interface paths {
      *
      *     Notes:
      *
-     *     - Introduction to data model: https://hanzo.com/docs/tracing-data-model
+     *     - Introduction to data model: https://hanzo.ai/docs/tracing-data-model
      *     - Batch sizes are limited to 3.5 MB in total. You need to adjust the number of events per batch accordingly.
      *     - The API does not return a 4xx status code for input errors. Instead, it responds with a 207 status code, which includes a list of the encountered errors. */
     post: operations["ingestion_batch"];
