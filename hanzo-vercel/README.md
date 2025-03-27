@@ -8,7 +8,7 @@ This is the JS/TS client for the Hanzo Vercel AI SDK integration. This integrati
 
 ## Documentation
 
-- Docs: https://hanzo.com/docs/integrations/vercel
+- Docs: https://hanzo.ai/docs/integrations/vercel
 - Reference: https://js.reference.hanzo.com/modules/hanzo_vercel.html
 
 ## Environments
