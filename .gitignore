@@ -11,4 +11,6 @@ yalc.lock
 .env
 langfuse-server
 docs
+replace_content.py
+rename_files.py
 .DS_Store

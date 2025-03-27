@@ -1,4 +1,4 @@
-import Langfuse from "langfuse-node";
+import Hanzo from "hanzo-node";
 // @ts-ignore
 import wtf from "wtfnode";
 
@@ -8,20 +8,20 @@ const {
   LF_HOST = "http://localhost:3000",
 } = process.env;
 
-const langfuse = new Langfuse({
+const hanzo = new Hanzo({
   publicKey: LF_PUBLIC,
   secretKey: LF_SECRET,
   baseUrl: LF_HOST,
   // flushAt: 1,
 });
 
-langfuse.trace({
+hanzo.trace({
   name: "test-trace",
 });
 
 async function cleanup() {
   wtf.dump();
-  await langfuse.shutdownAsync();
+  await hanzo.shutdownAsync();
   wtf.dump();
   console.log("shut down successfully");
 }

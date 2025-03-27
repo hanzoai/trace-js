@@ -1,10 +1,10 @@
 /** @type {import('typedoc').TypeDocOptions} */
 module.exports = {
-  entryPoints: ["./langfuse", "./langfuse-core", "./langfuse-langchain", "./langfuse-node", "./langfuse-vercel"],
+  entryPoints: ["./hanzo", "./hanzo-core", "./hanzo-langchain", "./hanzo-node", "./hanzo-vercel"],
   entryPointStrategy: "packages",
-  name: "Langfuse JS/TS SDKs",
+  name: "Hanzo JS/TS SDKs",
   navigationLinks: {
-    GitHub: "http://github.com/langfuse/langfuse-js",
-    Docs: "https://langfuse.com/docs/sdk/typescript",
+    GitHub: "http://github.com/hanzoai/trace-js",
+    Docs: "https://hanzo.com/docs/sdk/typescript",
   },
 };

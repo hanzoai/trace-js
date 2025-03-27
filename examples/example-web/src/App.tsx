@@ -1,8 +1,8 @@
 import "./App.css";
-import Langfuse from "langfuse";
+import Hanzo from "hanzo";
 import { useEffect, useState } from "react";
 
-const langfuse = new Langfuse({
+const hanzo = new Hanzo({
   publicKey: "pk-lf-1234567890",
   secretKey: "sk-lf-1234567890",
   baseUrl: "http://localhost:3000",
@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     const id = crypto.randomUUID();
     setTraceId(id);
-    langfuse.trace({
+    hanzo.trace({
       id,
     });
   }, []);
@@ -23,11 +23,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>This is an example app for testing the langfuse lib</p>
+        <p>This is an example app for testing the hanzo lib</p>
         <button
           className="Button"
           onClick={() =>
-            langfuse.score({
+            hanzo.score({
               name: "test",
               value: 1,
               traceId,

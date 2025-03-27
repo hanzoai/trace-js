@@ -1,5 +1,5 @@
 {
-  "name": "langfuse-integration-test-modules",
+  "name": "hanzo-integration-test-modules",
   "version": "2.0.0",
   "private": true,
   "description": "",
@@ -17,7 +17,7 @@
     "dotenv": "^16.4.5",
     "langchain": "^0.3.6",
     "openai": "^4.72.0",
-    "langfuse-langchain": "*"
+    "hanzo-langchain": "*"
   },
   "devDependencies": {
     "tsx": "^4.17.0",

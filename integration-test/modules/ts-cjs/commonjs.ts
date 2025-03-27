@@ -1,8 +1,8 @@
-import { Langfuse, CallbackHandler } from "langfuse-langchain";
-import LangfuseDefaultCallbackHandler from "langfuse-langchain";
+import { Hanzo, CallbackHandler } from "hanzo-langchain";
+import HanzoDefaultCallbackHandler from "hanzo-langchain";
 
-import { Langfuse as LangfuseNode } from "langfuse-node";
-import LangfuseNodeDefault from "langfuse-node";
+import { Hanzo as HanzoNode } from "hanzo-node";
+import HanzoNodeDefault from "hanzo-node";
 
 import { OpenAI } from "@langchain/openai";
 import { PromptTemplate } from "@langchain/core/prompts";
@@ -18,20 +18,20 @@ export async function run(): Promise<void> {
     secretKey: String(process.env["LANGFUSE_SECRET_KEY"]),
   };
 
-  const langfuse = new Langfuse(secrets);
+  const hanzo = new Hanzo(secrets);
 
-  const trace = langfuse.trace({ userId: "user-id" });
+  const trace = hanzo.trace({ userId: "user-id" });
 
-  const langfuseHandler = new CallbackHandler({ root: trace });
-  await langfuseHandler.flushAsync();
+  const hanzoHandler = new CallbackHandler({ root: trace });
+  await hanzoHandler.flushAsync();
 
-  const langfuseHandler2 = new LangfuseDefaultCallbackHandler({ root: trace });
-  await langfuseHandler2.flushAsync();
+  const hanzoHandler2 = new HanzoDefaultCallbackHandler({ root: trace });
+  await hanzoHandler2.flushAsync();
 
   console.log("Did construct objects and called them.");
 
-  new LangfuseNode();
-  new LangfuseNodeDefault();
+  new HanzoNode();
+  new HanzoNodeDefault();
 
   const prompt = PromptTemplate.fromTemplate("What is a good name for a company that makes {product}?");
   const llm = new OpenAI({
@@ -40,8 +40,8 @@ export async function run(): Promise<void> {
   });
 
   // we are not calling the chain, just testing that it typechecks
-  prompt.pipe(llm).withConfig({ callbacks: [langfuseHandler] });
-  prompt.pipe(llm).withConfig({ callbacks: [langfuseHandler2] });
+  prompt.pipe(llm).withConfig({ callbacks: [hanzoHandler] });
+  prompt.pipe(llm).withConfig({ callbacks: [hanzoHandler2] });
 }
 
 run();

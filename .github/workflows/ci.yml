@@ -49,31 +49,31 @@ jobs:
         with:
           version: 9.5.0
 
-      - name: Clone langfuse server
+      - name: Clone hanzo server
         run: |
-          git clone https://github.com/langfuse/langfuse.git ./langfuse-server
+          git clone https://github.com/hanzoai/hanzo.git ./hanzo-server
 
-      - name: Cache langfuse server dependencies
+      - name: Cache hanzo server dependencies
         uses: actions/cache@v3
         with:
-          path: ./langfuse-server/node_modules
+          path: ./hanzo-server/node_modules
           key: |
-            langfuse-server-${{ hashFiles('./langfuse-server/package-lock.json') }}
-            langfuse-server-
+            hanzo-server-${{ hashFiles('./hanzo-server/package-lock.json') }}
+            hanzo-server-
 
       - uses: actions/setup-node@v3
         with:
           node-version: 20
 
-      - name: Run langfuse server
+      - name: Run hanzo server
         run: |
-          cd ./langfuse-server
+          cd ./hanzo-server
 
-          echo "::group::Run langfuse server"
+          echo "::group::Run hanzo server"
           TELEMETRY_ENABLED=false docker compose up -d postgres
           echo "::endgroup::"
 
-          echo "::group::Logs from langfuse server"
+          echo "::group::Logs from hanzo server"
           TELEMETRY_ENABLED=false docker compose logs
           echo "::endgroup::"
 
@@ -98,9 +98,9 @@ jobs:
           echo "::endgroup::"
 
       # Add this step to check the health of the container
-      - name: Health check for langfuse server
+      - name: Health check for hanzo server
         run: |
-          echo "Checking if the langfuse server is up..."
+          echo "Checking if the hanzo server is up..."
           retry_count=0
           max_retries=10
           until curl --output /dev/null --silent --head --fail http://localhost:3000/api/public/health
@@ -108,14 +108,14 @@ jobs:
             retry_count=`expr $retry_count + 1`
             echo "Attempt $retry_count of $max_retries..."
             if [ $retry_count -ge $max_retries ]; then
-              echo "Langfuse server did not respond in time. Printing logs..."
-              docker logs langfuse-server-langfuse-web-1
+              echo "Hanzo server did not respond in time. Printing logs..."
+              docker logs hanzo-server-hanzo-web-1
               echo "Failing the step..."
               exit 1
             fi
             sleep 5
           done
-          echo "Langfuse server is up and running!"
+          echo "Hanzo server is up and running!"
 
       - run: yarn install
       - run: yarn compile
