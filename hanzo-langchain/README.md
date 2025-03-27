@@ -8,7 +8,7 @@ This is the JS/TS client for the Hanzo Langchain integration.
 
 ## Documentation
 
-- Docs: https://hanzo.com/docs/integrations/langchain
+- Docs: https://hanzo.ai/docs/integrations/langchain
 - Reference: https://js.reference.hanzo.com/modules/hanzo_langchain.html
 
 ## Environments

@@ -13,7 +13,7 @@ Modular mono repo for the Hanzo JS/TS client libraries.
 ## Packages
 
 > [!IMPORTANT]
-> The SDK was rewritten in v2 and released on December 18, 2023. Refer to the [v2 migration guide](https://hanzo.com/docs/sdk/typescript#upgrade1to2) for instructions on updating your code.
+> The SDK was rewritten in v2 and released on December 18, 2023. Refer to the [v2 migration guide](https://hanzo.ai/docs/sdk/typescript#upgrade1to2) for instructions on updating your code.
 
 | Package                                                                                     | NPM                                                                                                                                   | Environments          |
 | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
@@ -24,7 +24,7 @@ Modular mono repo for the Hanzo JS/TS client libraries.
 
 ## Documentation
 
-- Docs: https://hanzo.com/docs/sdk/typescript
+- Docs: https://hanzo.ai/docs/sdk/typescript
 - Reference: https://js.reference.hanzo.com
 
 ## License

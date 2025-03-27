@@ -144,7 +144,7 @@ export class CallbackHandler extends BaseCallbackHandler {
 
   /**
    * @deprecated This method will be removed in a future version as it is not concurrency-safe.
-   * Please use interop with the Hanzo SDK to get the trace ID ([docs](https://hanzo.com/docs/integrations/langchain/get-started#interoperability)).
+   * Please use interop with the Hanzo SDK to get the trace ID ([docs](https://hanzo.ai/docs/integrations/langchain/get-started#interoperability)).
    */
   getTraceId(): string | undefined {
     return this.traceId;
@@ -152,7 +152,7 @@ export class CallbackHandler extends BaseCallbackHandler {
 
   /**
    * @deprecated This method will be removed in a future version as it is not concurrency-safe.
-   * For more information on how to get trace URLs, see {@link https://hanzo.com/docs/tracing/url}.
+   * For more information on how to get trace URLs, see {@link https://hanzo.ai/docs/tracing/url}.
    */
   getTraceUrl(): string | undefined {
     return this.traceId ? `${this.hanzo.baseUrl}/trace/${this.traceId}` : undefined;

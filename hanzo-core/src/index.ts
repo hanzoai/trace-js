@@ -120,11 +120,11 @@ function isHanzoFetchError(err: any): boolean {
 }
 
 // Constants for URLs
-const SUPPORT_URL = "https://hanzo.com/support";
+const SUPPORT_URL = "https://hanzo.ai/support";
 const API_DOCS_URL = "https://api.reference.hanzo.com";
-const RBAC_DOCS_URL = "https://hanzo.com/docs/rbac";
-const INSTALLATION_DOCS_URL = "https://hanzo.com/docs/sdk/typescript/guide";
-const RATE_LIMITS_URL = "https://hanzo.com/faq/all/api-limits";
+const RBAC_DOCS_URL = "https://hanzo.ai/docs/rbac";
+const INSTALLATION_DOCS_URL = "https://hanzo.ai/docs/sdk/typescript/guide";
+const RATE_LIMITS_URL = "https://hanzo.ai/faq/all/api-limits";
 const NPM_PACKAGE_URL = "https://www.npmjs.com/package/hanzo";
 
 // Error messages

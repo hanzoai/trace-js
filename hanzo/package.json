@@ -1,5 +1,5 @@
 {
-  "name": "hanzo",
+  "name": "@hanzo/hanzo",
   "version": "0.0.1",
   "engines": {
     "node": ">=18"
@@ -7,7 +7,7 @@
   "author": {
     "name": "Hanzo",
     "email": "hi@hanzo.com",
-    "url": "https://hanzo.com"
+    "url": "https://hanzo.ai"
   },
   "license": "MIT",
   "repository": {
@@ -37,7 +37,7 @@
     "Readme.md"
   ],
   "dependencies": {
-    "hanzo-core": "^3.37.0"
+    "@hanzo/hanzo-core": "^0.0.1"
   },
   "gitHead": "d6d5a92736bca6a2beee4a894d23f72cc5b2f0ed",
   "devDependencies": {

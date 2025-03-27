@@ -5,6 +5,6 @@ module.exports = {
   name: "Hanzo JS/TS SDKs",
   navigationLinks: {
     GitHub: "http://github.com/hanzoai/trace-js",
-    Docs: "https://hanzo.com/docs/sdk/typescript",
+    Docs: "https://hanzo.ai/docs/sdk/typescript",
   },
 };

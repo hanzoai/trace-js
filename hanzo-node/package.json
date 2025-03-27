@@ -1,5 +1,5 @@
 {
-  "name": "hanzo-node",
+  "name": "@hanzo/hanzo-node",
   "version": "0.0.1",
   "scripts": {
     "prepublishOnly": "cd .. && yarn build"
@@ -16,7 +16,7 @@
   "author": {
     "name": "Hanzo",
     "email": "hi@hanzo.com",
-    "url": "https://hanzo.com"
+    "url": "https://hanzo.ai"
   },
   "main": "lib/index.cjs.js",
   "module": "lib/index.mjs",
@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "axios": "^1.8.2",
-    "hanzo-core": "^3.37.0"
+    "@hanzo/hanzo-core": "^0.0.1"
   },
   "devDependencies": {
     "@types/node": "^22.7.4",

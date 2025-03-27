@@ -10,7 +10,7 @@ This is the Node.js client for Hanzo.
 
 ## Documentation
 
-- Docs: https://hanzo.com/docs/sdk/typescript
+- Docs: https://hanzo.ai/docs/sdk/typescript
 - Reference: https://js.reference.hanzo.com/modules/hanzo_node.html
 
 ## Installation
