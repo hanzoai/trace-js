@@ -1,3 +1,5 @@
+<p align="center"><img src=".github/hero.svg" alt="trace-js" width="880"></p>
+
 ![GitHub Banner](https://github.com/hanzoai/trace-js/assets/2834609/d1613347-445f-4e91-9e84-428fda9c3659)
 
 # trace-js
