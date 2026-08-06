@@ -1,0 +1,21 @@
+# hanzoai/trace-js — the JS/TS tracing SDKs (hanzo-core, hanzo, hanzo-node,
+# hanzo-langchain, hanzo-vercel) in one yarn workspace. Publishes to npm from a
+# tag; no image, no deploy.
+#
+# The build IS the typecheck: `yarn compile` is the rollup pipeline that emits
+# every package's cjs/esm bundle and its .d.ts, so a type error in any of the
+# five packages fails here — and the artifact this repo exists to publish is
+# exactly what gets built.
+#
+# Not `yarn test`: every test script is `dotenv -- jest`, and the suites talk to
+# a live ingest host with keys from .env. That is an integration lane; it fails
+# for a missing credential, which is not a statement about the commit.
+# Not `yarn lint` either: that script is `eslint --fix`, which REPAIRS what it
+# measures. A check that rewrites the tree can report success for code that was
+# wrong when the job started.
+test:
+  - name: compile
+    run: |
+      set -e
+      yarn install --frozen-lockfile
+      yarn compile
