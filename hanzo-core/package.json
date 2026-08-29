@@ -37,10 +37,10 @@
     "Readme.md"
   ],
   "dependencies": {
-    "mustache": "^4.2.0"
+    "mustache": "catalog:"
   },
   "devDependencies": {
-    "@types/mustache": "^4.2.5"
+    "@types/mustache": "catalog:"
   },
   "gitHead": "d6d5a92736bca6a2beee4a894d23f72cc5b2f0ed"
 }

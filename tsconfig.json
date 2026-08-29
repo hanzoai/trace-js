@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    "paths": {
+      "*": ["./*"]
+    },
     "module": "ESNext",
     "moduleResolution": "node",
     "isolatedModules": true,
@@ -14,7 +17,7 @@
     "noEmit": false,
     "incremental": true,
     "strict": true,
-    "baseUrl": "./", // this must be specified if "paths" is specified.
+    // this must be specified if "paths" is specified.
     "rootDir": "./",
     "lib": [
       "ES2021",

@@ -13,14 +13,14 @@
     "test:tsc-cjs": "tsc --noEmit -p ts-cjs/tsconfig.json"
   },
   "dependencies": {
-    "@langchain/community": "^0.3",
-    "dotenv": "^16.4.5",
-    "langchain": "^0.3.6",
-    "openai": "^4.72.0",
-    "hanzo-langchain": "*"
+    "@langchain/community": "catalog:",
+    "dotenv": "catalog:",
+    "langchain": "catalog:",
+    "openai": "catalog:",
+    "hanzo-langchain": "catalog:"
   },
   "devDependencies": {
-    "tsx": "^4.17.0",
-    "typescript": "^5.5.3"
+    "tsx": "catalog:",
+    "typescript": "catalog:"
   }
 }
